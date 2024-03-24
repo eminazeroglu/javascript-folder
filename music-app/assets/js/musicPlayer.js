@@ -73,7 +73,7 @@ class MusicPlayer {
             this.ui.eqContent.style.display = 'block'
         }
     }
-
+ 
     calculateTime (seconder) {
         const minute = Math.floor(seconder / 60);
         const second = Math.floor(seconder % 60);

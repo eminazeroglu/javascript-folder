@@ -16,7 +16,7 @@ const ui = {
     volume: document.getElementById('volume'),
     eqContent: document.getElementById('eqContent'),
 }
-
+ 
 const player = new MusicPlayer(musics, ui);
 
 player.displayMusic();

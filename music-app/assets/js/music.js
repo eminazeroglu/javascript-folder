@@ -23,4 +23,4 @@ const musics = [
         mp3: 'murat-gogebakan-vurgunum.mp3',
         img: 'murat-gogebakan-vurgunum.jpeg'
     }
-]
+] 
