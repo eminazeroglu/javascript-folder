@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .seat {
+            width: 100%;
+            height: 30px;
+            background-color: #5b5b5b;
+            border-radius: 8px;
+        }
+
+        .film.active {
+            background-color: #66B979;
+        }
+
+        .selected {
+            background-color: #FF9446;
+        }
+
+        .filled {
+            background-color: #AEAEAE;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-[#222]">
+
+
+    <div class="w-[570px] mx-auto my-[40px]">
+        <div class="w-full h-[350px] bg-white overflow-hidden rounded-[16px] shadow-[0px_6px_10px_3px_#F8F8F840]">
+            <iframe id="display" class="w-full h-full" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    
+        <div class="grid grid-cols-12 mt-[30px] gap-[10px]" id="container"></div>
+
+        <div class="flex mt-[25px] gap-x-[10px]" id="filmBtns"></div>
+
+        <div class="bg-black text-white p-3 mt-5 hidden" id="text"></div>
+
+        <div class="mt-[30px] flex text-white bg-black py-[15px] px-[22px] rounded-lg">
+            <div class="flex flex-1 items-center space-x-[12px]">
+                <span class="inline-block size-[50px] selected rounded-lg"></span>
+                <span>Selected</span>
+            </div>
+            <div class="flex flex-1 items-center space-x-[12px]">
+                <span class="inline-block size-[50px] bg-[#5B5B5B] rounded-lg"></span>
+                <span>Empty</span>
+            </div>
+            <div class="flex flex-1 items-center space-x-[12px]">
+                <span class="inline-block size-[50px] filled rounded-lg"></span>
+                <span>Filled</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
