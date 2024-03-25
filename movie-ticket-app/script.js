@@ -8,19 +8,19 @@ const films = [
         name: 'Esaretin Bedeli',
         video: 'https://www.youtube.com/embed/87Z98pEFMhs',
         price: 15,
-        seat: 48
+        seat: 46
     },
     {
         name: 'Başlangıç',
         video: 'https://www.youtube.com/embed/YoHD9XEInc0',
         price: 20,
-        seat: 36
+        seat: 32
     },
     {
         name: 'Yeşil Yol',
         video: 'https://www.youtube.com/embed/Ki4haFrqSrw',
         price: 25,
-        seat: 24
+        seat: 20
     }
 ];
 
@@ -77,8 +77,10 @@ filmBtns.addEventListener('click', (e) => {
     if (e.target.matches('button')) {
         filmBtns.querySelectorAll('.film').forEach(btn => btn.classList.remove('active'))
         e.target.classList.add('active');
+        const film = getSelectFilm();
         showFilm();
         calculatePrice();
+        createSeats(film.seat)
     }
 })
 

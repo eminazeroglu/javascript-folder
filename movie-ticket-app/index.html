@@ -8,10 +8,11 @@
 
     <style>
         .seat {
-            width: 100%;
+            width: 30px;
             height: 30px;
             background-color: #5b5b5b;
             border-radius: 8px;
+            flex-shrink: 0;
         }
 
         .film.active {
@@ -42,7 +43,7 @@
             </iframe>
         </div>
     
-        <div class="grid grid-cols-12 mt-[30px] gap-[10px]" id="container"></div>
+        <div class="flex flex-wrap justify-center mt-[30px] gap-[10px]" id="container"></div>
 
         <div class="flex mt-[25px] gap-x-[10px]" id="filmBtns"></div>
 
